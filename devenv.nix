@@ -40,7 +40,6 @@
     exec = "alembic upgrade head";
     status = "alembic check";
     cwd = "${config.devenv.root}/backend";
-    after = [ "devenv:services:postgres" ];
   };
 
   # https://devenv.sh/processes/
