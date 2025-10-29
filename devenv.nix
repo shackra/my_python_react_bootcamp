@@ -46,7 +46,7 @@
   # processes.dev.exec = "${lib.getExe pkgs.watchexec} -n -- ls -la";
   processes = {
     "backend" = {
-      exec = "flask --app main run";
+      exec = "flask --app main run --debug";
       cwd = "${config.devenv.root}/backend";
     };
   };
