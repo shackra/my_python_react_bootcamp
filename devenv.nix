@@ -44,6 +44,12 @@
 
   # https://devenv.sh/processes/
   # processes.dev.exec = "${lib.getExe pkgs.watchexec} -n -- ls -la";
+  processes = {
+    "backend" = {
+      exec = "flask --app main run";
+      cwd = "${config.devenv.root}/backend";
+    };
+  };
 
   # https://devenv.sh/services/
   services.postgres = {

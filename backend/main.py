@@ -1,6 +1,8 @@
-def main():
-    print("Hello from backend!")
+from flask import Flask
+
+app = Flask(__name__)
 
 
-if __name__ == "__main__":
-    main()
+@app.route("/", methods=["GET"])
+def hello():
+    return "Hello from backend!"
