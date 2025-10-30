@@ -54,6 +54,8 @@
   # https://devenv.sh/services/
   services.postgres = {
     enable = true;
+    listen_addresses = "localhost";
+    port = 5432;
     initialDatabases = [
       {
         name = "monsters";
