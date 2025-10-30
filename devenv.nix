@@ -7,6 +7,8 @@
 }:
 
 {
+  env.ALEMBIC_CONFIG = "${config.devenv.root}/backend/alembic.ini";
+
   # https://devenv.sh/packages/
   packages = [
     pkgs.git
@@ -39,7 +41,6 @@
   tasks."db:migrate" = {
     exec = "alembic upgrade head";
     status = "alembic check";
-    cwd = "${config.devenv.root}/backend";
   };
 
   # https://devenv.sh/processes/
